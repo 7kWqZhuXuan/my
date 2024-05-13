@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #444;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.label {
+    display: block;
+    margin-bottom: 5px;
+}
+#about {
+    background-color: #f7f7f7;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#about h2 {
+    color: #444;
+}
+
+#about p {
+    color: #666;
+}
+.output{
+    background-color:#f6f6f6;
+    display: block;
+    unicode-bidi: isolate;
+}
+#ball {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(43, 195, 255);
+    border-radius: 50%;
+    cursor: pointer;
+}
+#sponsorBtn {
+    padding: 10px 20px;
+    background-color: #007bff; /* 深蓝色 */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#sponsorBtn:hover {
+    background-color: #0056b3; /* 更深的蓝色 */
+}
+#sponsorBtn {
+    transition: background-color 0.3s ease; /* 添加过渡效果 */
+}
+
+#sponsorBtn:hover {
+    background-color: #0056b3; /* ... 省略其他CSS样式 ... */
+    transform: scale(1.1); /* 鼠标悬停时放大按钮 */
+}
+
+.advertisement {
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    width: 200px; /* 广告栏宽度 */
+    box-shadow: 50 10 10px rgba
+}
+
+#advertisement2 {
+    position: fixed;
+    right: 20px;
+    top: 400px;
+    width: 200px; /* 广告栏宽度 */
+    box-shadow: 500 10 10px rgba
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>文本简单加密</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<div id="ball"></div>
+<script>
+function textToBinary() {
+    var text = document.getElementById('text').value;
+    var result = '';
+    for (var i = 0; i < text.length; i++) {
+        var ascii = text.charCodeAt(i);
+        var binary = ascii.toString(2);
+        result += binary + ' ';
+    }
+    document.getElementById('binaryResult').textContent = result.trim();
+}
+
+function binaryToText() {
+    var binaryText = document.getElementById('binary').value;
+    var binaries = binaryText.split(' ');
+    var result = '';
+    for (var i = 0; i < binaries.length; i++) {
+        var ascii = parseInt(binaries[i], 2);
+        var char = String.fromCharCode(ascii);
+        result += char;
+    }
+    document.getElementById('textResult').textContent = result;
+}
+
+function copyToClipboard(id) {
+    var resultText = document.getElementById(id).textContent;
+    navigator.clipboard.writeText(resultText).then(function() {
+        alert('复制成功');
+    }).catch(function(err) {
+        alert('复制失败: ', err);
+    });
+}
+function scrollToTop() {
+    window.scrollTo(0, 0); 
+}
+document.body.appendChild(createBall());
+function createBall() {
+    var ball = document.createElement('div');
+    ball.style.position = 'fixed';
+    ball.style.bottom = '20px';
+    ball.style.right = '20px';
+    ball.style.width = '50px';
+    ball.style.height = '50px';
+    ball.style.backgroundColor = 'red';
+    ball.style.borderRadius = '50%';
+    ball.style.cursor = 'pointer';
+    ball.onclick = function() {
+        scrollToTop();
+    };
+    return ball;
+    function showSponsorPopup() {
+    var popup = document.getElementById('sponsorPopup');
+    popup.style.display = 'block';
+}
+
+function hideSponsorPopup() {
+    var popup = document.getElementById('sponsorPopup');
+    popup.style.display = 'none';
+}
+
+function thankYou() {
+    alert('谢谢支持！');
+    hideSponsorPopup();
+}
+
+function cancelSponsor() {
+    alert('已取消赞助');
+    hideSponsorPopup();
+}
+}
+</script>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <img src="ph/Logo.png" alt="Logo" />
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#">主页</a></li>
+            <li><a href="#about">简介</a></li>
+            <li><a href="#users">开始使用</a></li>
+            <li><a href="#sponsor">赞助我们</a></li>
+            <li><a href="#join">加入群聊</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <br>
+    <h1>文本与ASSCLL码值与二进制之间的转换</h1>
+    <section id="about">
+        <h2>简介</h2>
+        <br>
+        <p>文本 → ASSCLL → 二进制 </p>
+        <p>二进制值 → ASSCLL → 文本</p>
+        <p>欢迎来到我们的网站，我们专注于提供文本与二进制之间的转换服务。在这个数字化时代，数据和信息扮演着越来越重要的角色。然而，理解和处理这些数据和信息并不总是那么容易。我们的目标是帮助用户更好地理解数据和信息，从而提高他们的工作效率和创造力。</p>
+        <p>文本与二进制之间的转换是数据处理和分析的基础。我们的网站提供了一个简单易用的界面，用户可以轻松地将文本转换为二进制，或将二进制转换回文本。这种转换在多种场景中都非常有用，如编程、加密和解密、数据传输等。我们的转换工具可以帮助用户更好地理解这些过程，并提高他们的工作效率。</p>
+        <p>除了提供文本与二进制之间的转换服务，我们的网站还提供了一系列其他功能，如赞助我们和加入群聊。我们非常重视社区和用户的支持，因此我们提供了一个赞助我们页面，让用户可以了解如何支持我们的工作，并加入我们的社区。我们相信，通过社区的力量，我们可以一起创造更美好的未来。</p>
+        <p>我们的网站设计简洁直观，易于使用。我们使用了现代化的技术，以确保网站的性能和稳定性。我们相信，一个好的网站不仅仅是一个工具，更是一种体验。我们致力于为用户提供一个愉快的使用体验，让他们的工作更加轻松愉快。</p>
+        <p>我们非常感谢您的访问和关注。我们相信，通过我们的网站，您可以更好地理解数据和信息，并提高您的工作效率。如果您有任何问题或建议，请随时联系我们。我们期待着与您一起，共同创造更美好的未来。欢迎来到我们的网站，我们专注于提供文本与二进制之间的转换服务。在这个数字化时代，数据和信息扮演着越来越重要的角色。然而，理解和处理这些数据和信息并不总是那么容易。我们的目标是帮助用户更好地理解数据和信息，从而提高他们的工作效率和创造力。</p>
+        <p>文本与二进制之间的转换是数据处理和分析的基础。我们的网站提供了一个简单易用的界面，用户可以轻松地将文本转换为二进制，或将二进制转换回文本。这种转换在多种场景中都非常有用，如编程、加密和解密、数据传输等。我们的转换工具可以帮助用户更好地理解这些过程，并提高他们的工作效率。</p>
+        <p>除了提供文本与二进制之间的转换服务，我们的网站还提供了一系列其他功能，如赞助我们和加入群聊。我们非常重视社区和用户的支持，因此我们提供了一个赞助我们页面，让用户可以了解如何支持我们的工作，并加入我们的社区。我们相信，通过社区的力量，我们可以一起创造更美好的未来。</p>
+        <p>我们的网站设计简洁直观，易于使用。我们使用了现代化的技术，以确保网站的性能和稳定性。我们相信，一个好的网站不仅仅是一个工具，更是一种体验。我们致力于为用户提供一个愉快的使用体验，让他们的工作更加轻松愉快。</p>
+        <p>我们非常感谢您的访问和关注。我们相信，通过我们的网站，您可以更好地理解数据和信息，并提高您的工作效率。如果您有任何问题或建议，请随时联系我们。我们期待着与您一起，共同创造更美好的未来。</p>
+        <br>
+        <!-- 添加更多简介内容的HTML代码 -->
+    </section>
+
+    <div class="input-group" id="users">
+        <h2>文本到二进制</h2>
+        <label for="text">输入文本：</label>
+        <input type="text" id="text" name="text">
+        <button id="sponsorBtn" onclick="textToBinary()">转换为二进制</button>
+    </div>
+
+    <div class="output">
+        <p>二进制结果：</p>
+        <p id="binaryResult"></p>
+        <button  id="sponsorBtn" class="copy-btn" onclick="copyToClipboard('binaryResult')">复制</button>
+    </div>
+
+    <div class="input-group">
+        <h2>二进制到文本</h2>
+        <label for="binary">输入二进制：</label>
+        <input type="text" id="binary" name="binary">
+        <button id="sponsorBtn" onclick="binaryToText()">转换回文本</button>
+    </div>
+
+    <div class="output">
+        <p>文本结果：</p>
+        <p id="textResult"></p>
+        <button  id="sponsorBtn" class="copy-btn" onclick="copyToClipboard('textResult')">复制</button>
+    </div>
+    
+
+</div>
+<aside class="advertisement">
+    <!-- 广告内容 -->
+    <img src="ph/advertisement1.png" alt="广告1" width="150" height="150"/>
+    <h1>网站开发者</h1>
+    <p>网站开发者:<b>竹轩</b></p>
+</aside>
+<aside id="advertisement2">
+    <!-- 广告内容 -->
+    <img src="ph/advertisement2.png" alt="广告2" width="150" height="150"/>
+    <h1>开发者群聊</h1>
+    <p>QQ:716567485</p>
+</aside>
+<footer>
+    <div id="sponsor">
+        <h2>赞助我们</h2>
+        <button id="sponsorBtn" onclick="window.location.href='https://afdian.net/a/glminecrft'">赞助我们</button>
+        </p>
+        <p>感谢您的支持！</p>
+    </div>
+    <div id="join">
+        <h2>加入群聊</h2>
+        <button id="sponsorBtn" onclick="window.location.href='https://qm.qq.com/cgi-bin/qm/qr?k=gMoC50JpqNtObv6FrM42UL-G8RmAG_gw&jump_from=webapi&authKey=ByQkWARapAStX+u93hO94MPBmfurwa/xDRtzu813EsNGGT5YXeqM1xw/cn0Lk8uU'">赞助我们</button>
+        <p>欢迎加入我们的社区！</p>
+    </div>
+</div>
+</footer>
+</body>
+</html>
