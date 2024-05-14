@@ -86,7 +86,44 @@ function addComment() {
         document.getElementById('comment').value = ''; // 清空评论输入框
         document.getElementById('nickname').value = ''; // 清空昵称输入框
     }
+    function fetchHistory() {
+    var username = 'your_username'; // 替换为用户的实际用户名
+    var url = 'http://localhost:3000/history?username=' + username;
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                alert(data.error);
+            } else {
+                var history = data;
+                // 这里可以添加代码来显示历史记录
+            }
+        })
+        .catch(error => {
+            alert('Error fetching history: ' + error);
+        });
 }
+
+}
+function showPopup() {
+    var popup = document.getElementById('popup');
+    popup.style.display = 'block';
+}
+
+function hidePopup() {
+    var popup = document.getElementById('popup');
+    popup.style.display = 'none';
+}
+
+function updatePopupContent(content) {
+    var popupContent = document.getElementById('popupContent');
+    popupContent.textContent = content;
+}
+
+// 假设在页面加载完成后显示弹窗
+window.onload = function() {
+    showPopup();
+};
 </script>
 </head>
 <body>
@@ -193,7 +230,15 @@ function addComment() {
     </div>
 </div>
 </footer>
-    <a href="updates.html">查看更新日志</a>
-</body>
+    <a  href="history.html" href="javascript:void(0);" onclick="fetchHistory()">查看历史记录</a>
+    <a class="footer" href="updates.html">查看更新日志</a>
 
+    <div id="popup" class="popup">
+        <div id="popupContent">
+            <img src="ph/popup.png" alt="弹窗" width="286" height="526">
+            <p>前俩天是不是母亲节？？？</p>
+            <button id="closeBtn" onclick="hidePopup()">关闭</button>
+        </div>
+    </div>
+</body>
 </html>
