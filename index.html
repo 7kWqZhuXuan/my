@@ -124,7 +124,22 @@ function updatePopupContent(content) {
 window.onload = function() {
     showPopup();
 };
+function showPopup() {
+    var popup = document.getElementById('popup');
+    popup.style.display = 'block';
+}
+
+function hidePopup() {
+    var popup = document.getElementById('popup');
+    popup.style.display = 'none';
+}
+
+function updatePopupContent(content) {
+    var popupContent = document.getElementById('popupContent');
+    popupContent.textContent = content;
+}
 </script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
 <body>
 <header>
@@ -203,15 +218,15 @@ window.onload = function() {
 <aside class="advertisement">
     <!-- 广告内容 -->
     <img src="ph/advertisement1.png" alt="广告1" width="150" height="150"/>
-    <h1>网站开发者</h1>
-    <p>网站开发者:<b>竹轩</b></p>
-    <p>赞助一下我吧!快吃不起饭了!<p>
-    <p>赏个5块钱面包吃吧awa</p>
+    <h1 class="advertisement_h1">网站开发者</h1>
+    <p id="advertisement_p">网站开发者:<b>竹轩</b></p>
+    <p id="advertisement_p">赞助一下我吧!快吃不起饭了!<p>
+    <p id="advertisement_p">赏个5块钱面包吃吧awa</p>
 </aside>
-<aside id="advertisement2">
+<aside class="advertisement2">
     <!-- 广告内容 -->
     <img src="ph/advertisement2.png" alt="广告2" width="150" height="150"/>
-    <h1>开发者群聊</h1>
+    <h1 class="advertisement_h1">开发者群聊</h1>
     <p>QQ:716567485</p>
 </aside>
 
@@ -237,6 +252,7 @@ window.onload = function() {
         <div id="popupContent">
             <img src="ph/popup.png" alt="弹窗" width="286" height="526">
             <p>前俩天是不是母亲节？？？</p>
+            <button id="viewBtn" onclick="window.location.href='announcement.html'">查看</button>
             <button id="closeBtn" onclick="hidePopup()">关闭</button>
         </div>
     </div>

@@ -53,6 +53,7 @@ nav ul li a:hover {
     margin-bottom: 5px;
 }
 #about {
+    border-radius: 15px;
     background-color: #f7f7f7;
     padding: 20px;
     margin-top: 20px;
@@ -103,21 +104,7 @@ nav ul li a:hover {
     transform: scale(1.1); /* 鼠标悬停时放大按钮 */
 }
 
-.advertisement {
-    position: fixed;
-    right: 15px;
-    top: 15px;
-    width: 130px; /* 广告栏宽度 */
-    box-shadow: 50 10 10px rgba
-}
 
-#advertisement2 {
-    position: fixed;
-    right: 20px;
-    top: 400px;
-    width: 130px; /* 广告栏宽度 */
-    box-shadow: 500 10 10px rgba
-}
 #ad_p{
     width: 0.5px;
 }
@@ -265,7 +252,7 @@ nav ul li a:hover {
 }
 
 .popup button {
-    padding: 10px 20px;
+    padding:10px 20px;
     background-color: #007bff;
     color: white;
     border: none;
@@ -275,4 +262,63 @@ nav ul li a:hover {
 
 .popup button:hover {
     background-color: #0056b3;
+}
+#advertisement1 {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    width: 300px; /* 广告栏宽度 */
+    background-color: #fff; /* 广告栏背景色 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 广告栏阴影 */
+    padding: 20px; /* 广告栏内边距 */
+    border-radius: 8px; /* 广告栏圆角 */
+}
+
+#advertisement1 img {
+    width: 100%; /* 广告图片宽度 */
+    height: auto; /* 保持图片高度自动 */
+}
+.advertisement {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    width: 150px; /* 广告栏宽度 */
+    background-color: #fff; /* 广告栏背景色 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 广告栏阴影 */
+    padding: 20px; /* 广告栏内边距 */
+    border-radius: 8px; /* 广告栏圆角 */
+}
+
+.advertisement img {
+    width: 70%; /* 广告图片宽度 */
+    height: auto; /* 保持图片高度自动 */
+}
+.advertisement2 {
+    position: fixed;
+    right: 20px;
+    top: 380px;
+    width: 150px; /* 广告栏宽度 */
+    background-color: #fff; /* 广告栏背景色 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 广告栏阴影 */
+    padding: 20px; /* 广告栏内边距 */
+    border-radius: 8px; /* 广告栏圆角 */
+}
+
+.advertisement2 img {
+    width: 70%; /* 广告图片宽度 */
+    height: auto; /* 保持图片高度自动 */
+}
+#advertisement_p {
+    display: block;
+    font-size: 12px;
+    margin-block-start: 1px;
+    margin-block-end: 1ex;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate
+}
+#advertisement_h1 {
+    font-size: 1.3em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em
 }
