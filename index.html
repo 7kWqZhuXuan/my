@@ -75,6 +75,18 @@ function cancelSponsor() {
     hideSponsorPopup();
 }
 }
+function addComment() {
+    var comment = document.getElementById('comment').value;
+    var nickname = document.getElementById('nickname').value;
+    if (comment.trim() !== '' && nickname.trim() !== '') {
+        var commentsList = document.getElementById('commentsList');
+        var commentItem = document.createElement('li');
+        commentItem.textContent = nickname + ': ' + comment;
+        commentsList.appendChild(commentItem);
+        document.getElementById('comment').value = ''; // 清空评论输入框
+        document.getElementById('nickname').value = ''; // 清空昵称输入框
+    }
+}
 </script>
 </head>
 <body>
@@ -139,14 +151,25 @@ function cancelSponsor() {
         <p id="textResult"></p>
         <button  id="sponsorBtn" class="copy-btn" onclick="copyToClipboard('textResult')">复制</button>
     </div>
-    
+    <br><br><br><br><br> <br><br><br>
+    <section id="comments">
+        <h2>发表评论</h2>
+        <input type="text" id="nickname" placeholder="输入您的昵称">
+        <textarea id="comment" rows="4" placeholder="输入您的评论"></textarea>
+        <button onclick="addComment()">提交评论</button>
+    </section>
 
+    <ul id="commentsList"></ul>
+    
+    <br><br><br><br><br><br>
 </div>
 <aside class="advertisement">
     <!-- 广告内容 -->
     <img src="ph/advertisement1.png" alt="广告1" width="150" height="150"/>
     <h1>网站开发者</h1>
     <p>网站开发者:<b>竹轩</b></p>
+    <p>赞助一下我吧!快吃不起饭了!<p>
+    <p>赏个5块钱面包吃吧awa</p>
 </aside>
 <aside id="advertisement2">
     <!-- 广告内容 -->
@@ -154,6 +177,8 @@ function cancelSponsor() {
     <h1>开发者群聊</h1>
     <p>QQ:716567485</p>
 </aside>
+
+</div>
 <footer>
     <div id="sponsor">
         <h2>赞助我们</h2>
@@ -163,10 +188,12 @@ function cancelSponsor() {
     </div>
     <div id="join">
         <h2>加入群聊</h2>
-        <button id="sponsorBtn" onclick="window.location.href='https://qm.qq.com/cgi-bin/qm/qr?k=gMoC50JpqNtObv6FrM42UL-G8RmAG_gw&jump_from=webapi&authKey=ByQkWARapAStX+u93hO94MPBmfurwa/xDRtzu813EsNGGT5YXeqM1xw/cn0Lk8uU'">赞助我们</button>
+        <button id="sponsorBtn" onclick="window.location.href='https://qm.qq.com/cgi-bin/qm/qr?k=CAhqcm9HwYSTA6N3G2Cm7xkFixTyYrpE&jump_from=webapi&authKey=eIMQPNwkUlxXMism4LESIA22xmeZ2B2C/ExBQtQtK0XI9/uK4u6ugwOrpR7+PtDC'">加入我们</button>
         <p>欢迎加入我们的社区！</p>
     </div>
 </div>
 </footer>
+
 </body>
+
 </html>
