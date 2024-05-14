@@ -174,3 +174,43 @@ nav ul li a:hover {
 #commentsList li:last-child {
     border-bottom: none;
 }
+
+/* 更新日志样式 */
+#updateList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#updateList li {
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#updateList li:last-child {
+    border-bottom: none;
+}
+#updateTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#updateTable th, #updateTable td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+#updateTable th {
+    background-color: #f0f0f0;
+}
+
+#updateTable tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#updateTable tbody tr:hover {
+    background-color: #f5f5f5;
+}
