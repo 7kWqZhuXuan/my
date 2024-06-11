@@ -83,11 +83,11 @@ function addComment() {
         var commentItem = document.createElement('li');
         commentItem.textContent = nickname + ': ' + comment;
         commentsList.appendChild(commentItem);
-        document.getElementById('comment').value = ''; // 清空评论输入框
-        document.getElementById('nickname').value = ''; // 清空昵称输入框
+        document.getElementById('comment').value = '';
+        document.getElementById('nickname').value = '';
     }
     function fetchHistory() {
-    var username = 'your_username'; // 替换为用户的实际用户名
+    var username = 'your_username';
     var url = 'http://localhost:3000/history?username=' + username;
     fetch(url)
         .then(response => response.json())
@@ -96,7 +96,6 @@ function addComment() {
                 alert(data.error);
             } else {
                 var history = data;
-                // 这里可以添加代码来显示历史记录
             }
         })
         .catch(error => {
@@ -120,7 +119,6 @@ function updatePopupContent(content) {
     popupContent.textContent = content;
 }
 
-// 假设在页面加载完成后显示弹窗
 window.onload = function() {
     showPopup();
 };
@@ -175,7 +173,6 @@ function updatePopupContent(content) {
         <p>我们的网站设计简洁直观，易于使用。我们使用了现代化的技术，以确保网站的性能和稳定性。我们相信，一个好的网站不仅仅是一个工具，更是一种体验。我们致力于为用户提供一个愉快的使用体验，让他们的工作更加轻松愉快。</p>
         <p>我们非常感谢您的访问和关注。我们相信，通过我们的网站，您可以更好地理解数据和信息，并提高您的工作效率。如果您有任何问题或建议，请随时联系我们。我们期待着与您一起，共同创造更美好的未来。</p>
         <br>
-        <!-- 添加更多简介内容的HTML代码 -->
     </section>
 
     <div class="input-group" id="users">
